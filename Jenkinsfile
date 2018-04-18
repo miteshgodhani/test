@@ -11,7 +11,7 @@ stage ('Unit test') {
  bat ''' ng e2e '''
 }
 stage ('Build') {
- bat ''' npm run clean'''
+ //bat ''' npm run clean'''
  bat ''' npm run build --env=stage'''
 }
 stage ('Deploy') {
