@@ -1,7 +1,9 @@
 node {
 stage ('Prepare environment') {
 
-sh 'npm install'
+//sh 'npm install'
+      bat '''
+    npm install'''
 }
 stage ('Code analyse') {
 sh 'echo "Run some lints"'
