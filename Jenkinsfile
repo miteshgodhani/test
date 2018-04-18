@@ -4,10 +4,10 @@ stage ('Prepare environment') {
 //sh 'npm install'
       bat ''' npm install'''
 }
-stage ('Code analyse') {
+stage ('Code analyse using lint') {
 bat ''' ng lint '''
 }
-stage ('Unit test') {
+stage ('e2e test') {
  bat ''' ng e2e '''
 }
 stage ('Build') {
