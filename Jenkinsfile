@@ -1,6 +1,6 @@
 node {
 stage (‘Prepare environment’) {
-//git branch: ‘development’, url: ‘git@bitbucket.org:example/myapp.git’
+
 sh ‘npm install’
 }
 stage (‘Code analyse’) {
