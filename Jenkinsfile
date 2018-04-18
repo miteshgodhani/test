@@ -5,14 +5,14 @@ stage ('Prepare environment') {
       bat ''' npm install'''
 }
 stage ('Code analyse') {
-bat ''' 'echo "Run some lints"'''
+bat ''' ng lint '''
 }
 stage ('Unit test') {
- bat ''' 'echo "Tests will back"'''
+ bat ''' ng e2e '''
 }
 stage ('Build') {
  bat ''' 'npm run clean'''
- bat ''' 'npm run build'''
+ bat ''' 'npm run build --env=stage'''
 }
 stage ('Deploy') {
 
