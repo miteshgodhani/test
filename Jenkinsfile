@@ -12,8 +12,10 @@ stage ('e2e test') {
 }
 stage ('Build') {
  //bat ''' npm run clean'''
- bat ''' npm run build --env=stage'''
+ bat ''' ng build --env=stage'''
 }
+            emailext attachLog: true, body: 'test body', subject: 'test subject', to: 'mitesh.godhani@infostretch.com'
+
 stage ('Deploy') {
 
  bat ''' sh user@server rm -rf /var/www/temp_deploy/dist/'''
