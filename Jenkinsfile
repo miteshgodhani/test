@@ -3,7 +3,7 @@ pipeline {
     stages {
 		stage ('Prepare environment') {
             steps {
-				sh ''' npm install'''
+				bat ''' npm install'''
             }
         }
 		stage ('Code analyse using lint') {
